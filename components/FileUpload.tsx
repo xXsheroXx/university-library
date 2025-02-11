@@ -153,11 +153,9 @@ const FileUpload = ({
         {file && (
           <p className={cn("upload-filename", styles.text)}>{file.filePath}</p>
         )}
-
-        {file && <p className="upload-filename">{file.filePath}</p>}
       </button>
 
-      {progress > 0 && (
+      {progress > 0 && progress !== 100 && (
         <div className="w-full rounded-full bg-green-200">
           <div className="progress" style={{ width: `${progress}%` }}>
             {progress}% uploaded
